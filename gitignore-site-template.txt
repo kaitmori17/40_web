@@ -1,0 +1,25 @@
+# 各サイト(Next.js)用の .gitignore 雛形
+# site-01 等を作るときに、サイトのリポジトリ直下に .gitignore として配置する。
+# (これは雛形メモ。管理用リポジトリでは sites/ を無視するため、ここに置いて参照用にする)
+
+# 依存・ビルド成果物
+node_modules/
+.next/
+out/
+build/
+dist/
+
+# 環境変数・秘密情報(絶対にコミットしない)
+.env
+.env.*
+!.env.example        # 値を空にしたキーの雛形だけは共有可
+
+# Vercel
+.vercel/
+
+# ログ・OS・エディタ
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

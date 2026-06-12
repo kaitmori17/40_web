@@ -1,0 +1,9 @@
+# 管理用リポジトリの .gitignore
+# 各サイトは独立リポジトリ。入れ子回避のため sites/ を丸ごと除外する。
+sites/
+
+# OS / エディタ
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
