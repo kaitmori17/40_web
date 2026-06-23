@@ -1,0 +1,175 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "半歩先から" [ref=e4] [cursor=pointer]:
+        - /url: home.dc.html
+        - text: 半歩先から
+      - navigation [ref=e6]:
+        - link "退職とお金" [ref=e7] [cursor=pointer]:
+          - /url: "#"
+        - link "記事一覧" [ref=e8] [cursor=pointer]:
+          - /url: "#"
+        - link "無料ツール" [ref=e9] [cursor=pointer]:
+          - /url: "#"
+        - link "運営者について" [ref=e10] [cursor=pointer]:
+          - /url: "#"
+  - generic [ref=e11]:
+    - generic [ref=e12]:
+      - link "ホーム" [ref=e13] [cursor=pointer]:
+        - /url: home.dc.html
+      - text: ›
+      - link "退職とお金" [ref=e14] [cursor=pointer]:
+        - /url: "#"
+      - text: ›失業保険
+    - generic [ref=e15]:
+      - generic [ref=e16]: 失業保険
+      - heading "失業保険はいつ・何日・いくら？退職を「逆算で設計」する方法" [level=1] [ref=e17]
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - generic [ref=e20]: 人
+          - generic [ref=e22]: 監修：人事・経営コンサルタント
+        - generic [ref=e23]: 更新：2026-06-23
+        - generic [ref=e24]: 出典あり
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - generic [ref=e27]: この記事の結論
+        - list [ref=e28]:
+          - listitem [ref=e29]: 失業保険は、辞めてすぐに満額もらえるわけではない（空白期間がある）。
+          - listitem [ref=e30]: 総額は退職理由・年齢・加入年数で数十万円変わる。
+          - listitem [ref=e31]: だから「いつ・何日・いくら・いつまで」を逆算して設計する。
+      - paragraph [ref=e32]:
+        - strong [ref=e33]: 失業保険（雇用保険の基本手当）は、辞めてすぐに満額もらえるわけではありません。
+        - text: 押さえるべきクセは3つです。
+      - heading "ありがちな失敗：失業保険を“もらう”発想で辞める" [level=2] [ref=e34]
+      - list [ref=e35]:
+        - listitem [ref=e36]:
+          - text: 「来月辞めて、すぐ食いつなごう」→
+          - strong [ref=e37]: 空白期間で貯金が尽きる
+        - listitem [ref=e38]:
+          - text: 「とりあえず自己都合で」→
+          - strong [ref=e39]: 会社都合なら総額が倍近い場合がある
+          - text: のを逃す
+      - heading "逆算①：いつから出る？（空白期間）" [level=2] [ref=e40]
+      - paragraph [ref=e41]:
+        - strong [ref=e42]: 手続き後すぐには振り込まれません。
+        - text: 待期7日に加え、自己都合は原則１か月の給付制限があります。
+      - table [ref=e43]:
+        - rowgroup [ref=e44]:
+          - row "退職日 自己都合の給付制限" [ref=e45]:
+            - columnheader "退職日" [ref=e46]
+            - columnheader "自己都合の給付制限" [ref=e47]
+        - rowgroup [ref=e48]:
+          - row "2025年4月1日以降 原則 1か月（2か月から短縮）" [ref=e49]:
+            - cell "2025年4月1日以降" [ref=e50]
+            - cell "原則 1か月（2か月から短縮）" [ref=e51]
+          - row "2025年3月31日以前 原則 2か月" [ref=e52]:
+            - cell "2025年3月31日以前" [ref=e53]
+            - cell "原則 2か月" [ref=e54]
+      - generic [ref=e55]:
+        - generic [ref=e56]: "!"
+        - generic [ref=e57]: 独立を考える人の分かれ道：失業保険は「求職活動が前提」。最初から独立一直線だと、原則もらえません。
+      - heading "逆算②：何日・いくら？（受給総額の目安）" [level=2] [ref=e58]
+      - paragraph [ref=e59]: 総額＝基本手当日額 × 所定給付日数。両方とも、あなたの状況で変わります。
+      - heading "もらえる日数（会社都合）" [level=3] [ref=e60]
+      - table [ref=e61]:
+        - rowgroup [ref=e62]:
+          - row "年齢 1年未満 1〜5年 5〜10年 10〜20年 20年以上" [ref=e63]:
+            - columnheader "年齢" [ref=e64]
+            - columnheader "1年未満" [ref=e65]
+            - columnheader "1〜5年" [ref=e66]
+            - columnheader "5〜10年" [ref=e67]
+            - columnheader "10〜20年" [ref=e68]
+            - columnheader "20年以上" [ref=e69]
+        - rowgroup [ref=e70]:
+          - row "30〜35歳 90 120 180 210 240" [ref=e71]:
+            - cell "30〜35歳" [ref=e72]
+            - cell "90" [ref=e73]
+            - cell "120" [ref=e74]
+            - cell "180" [ref=e75]
+            - cell "210" [ref=e76]
+            - cell "240" [ref=e77]
+          - row "35〜45歳 90 150 180 240 270" [ref=e78]:
+            - cell "35〜45歳" [ref=e79]
+            - cell "90" [ref=e80]
+            - cell "150" [ref=e81]
+            - cell "180" [ref=e82]
+            - cell "240" [ref=e83]
+            - cell "270" [ref=e84]
+          - row "45〜60歳 90 180 240 270 330" [ref=e85]:
+            - cell "45〜60歳" [ref=e86]
+            - cell "90" [ref=e87]
+            - cell "180" [ref=e88]
+            - cell "240" [ref=e89]
+            - cell "270" [ref=e90]
+            - cell "330" [ref=e91]:
+              - strong [ref=e92]: "330"
+      - generic [ref=e93]:
+        - generic [ref=e94]: 無料ツール：退職金の手取りを試算
+        - paragraph [ref=e95]: 勤続年数と退職金額を入れるだけ。登録不要・個人情報の入力なし、結果は保存されません。
+        - link "退職金シミュレーターを使う →" [ref=e96] [cursor=pointer]:
+          - /url: "#"
+          - text: 退職金シミュレーターを使う
+          - generic [ref=e97]: →
+      - heading "まとめ：退職前にやる「逆算設計」チェックリスト" [level=2] [ref=e98]
+      - list [ref=e99]:
+        - listitem [ref=e100]:
+          - strong [ref=e101]: 離職理由を確認
+          - text: ：自己都合か会社都合かで総額・開始時期が変わる。
+        - listitem [ref=e102]:
+          - strong [ref=e103]: 空白期間の生活費を用意
+          - text: ：退職〜初回入金まで約2か月分。
+        - listitem [ref=e104]:
+          - strong [ref=e105]: 退職後すぐ手続き
+          - text: ：受給期間は1年。離職票が届いたら即ハローワークへ。
+      - generic [ref=e106]:
+        - heading "出典（一次情報）" [level=2] [ref=e107]
+        - list [ref=e108]:
+          - listitem [ref=e109]: ハローワーク「基本手当について」 hellowork.mhlw.go.jp/insurance/insurance_basicbenefit.html
+          - listitem [ref=e110]: ハローワーク「基本手当の所定給付日数」 hellowork.mhlw.go.jp/insurance/insurance_benefitdays.html
+          - listitem [ref=e111]: 厚生労働省「令和6年雇用保険制度改正」 mhlw.go.jp
+        - generic [ref=e112]: 本記事は令和7年（2025年）時点の制度にもとづく一般的な解説です。個別の受給可否・金額は状況で異なります。最新情報はお住まいのハローワークでご確認ください。
+      - generic [ref=e113]:
+        - generic [ref=e114]: 人
+        - generic [ref=e115]:
+          - generic [ref=e116]: 監修：人事・組織・経営コンサルタント
+          - generic [ref=e117]: 企業の人事・組織・経営を支援。退職・独立の実務に詳しい。
+          - paragraph [ref=e118]: この記事は公式の一次情報にもとづき、実務の視点で解説しています。
+      - generic [ref=e119]:
+        - heading "関連する記事" [level=2] [ref=e120]
+        - link "退職金の手取りはいくら？退職所得控除のしくみ →" [ref=e121] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e122]: 退職金の手取りはいくら？退職所得控除のしくみ
+          - generic [ref=e123]: →
+        - link "自己都合と会社都合、受給はどう違う？ →" [ref=e124] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e125]: 自己都合と会社都合、受給はどう違う？
+          - generic [ref=e126]: →
+        - link "独立するなら、失業保険はどうなる？ →" [ref=e127] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e128]: 独立するなら、失業保険はどうなる？
+          - generic [ref=e129]: →
+  - contentinfo [ref=e130]:
+    - generic [ref=e131]:
+      - generic [ref=e132]:
+        - link "半歩先から" [ref=e133] [cursor=pointer]:
+          - /url: home.dc.html
+          - text: 半歩先から
+        - paragraph [ref=e135]: 会社員から独立を目指す人へ。退職・お金・手続きを専門家が解説。
+      - generic [ref=e136]:
+        - generic [ref=e137]:
+          - heading "コンテンツ" [level=4] [ref=e138]
+          - link "退職とお金" [ref=e139] [cursor=pointer]:
+            - /url: "#"
+          - link "試算ツール" [ref=e140] [cursor=pointer]:
+            - /url: "#"
+          - link "記事一覧" [ref=e141] [cursor=pointer]:
+            - /url: "#"
+        - generic [ref=e142]:
+          - heading "サイトについて" [level=4] [ref=e143]
+          - link "運営者情報" [ref=e144] [cursor=pointer]:
+            - /url: "#"
+          - link "プライバシーポリシー" [ref=e145] [cursor=pointer]:
+            - /url: "#"
+          - link "お問い合わせ" [ref=e146] [cursor=pointer]:
+            - /url: "#"
+    - paragraph [ref=e148]: 本サイトは一般的な情報提供であり、個別の助言ではありません。© 半歩先から

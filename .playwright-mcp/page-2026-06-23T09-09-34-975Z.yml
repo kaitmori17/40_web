@@ -1,0 +1,29 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "フリーランスへの道（仮）" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=e5]:
+        - link "退職" [ref=e6] [cursor=pointer]:
+          - /url: /taishoku/
+        - link "退職金シミュレーター" [ref=e7] [cursor=pointer]:
+          - /url: /tools/taishokukin/
+  - main [ref=e8]:
+    - article [ref=e9]:
+      - heading "退職金の手取り（税金）シミュレーター" [level=1] [ref=e10]
+      - paragraph [ref=e11]: 退職金にかかる所得税・住民税と手取りの目安を計算します（一般の退職手当等の 場合）。入力・計算はすべてブラウザ内で行い、結果は保存・送信されません。
+      - generic [ref=e13]:
+        - generic [ref=e14]:
+          - text: 退職金（万円）
+          - spinbutton "退職金（万円）" [ref=e15]
+        - generic [ref=e16]:
+          - text: 勤続年数（年）
+          - spinbutton "勤続年数（年）" [ref=e17]
+        - button "計算する" [ref=e18] [cursor=pointer]
+      - separator [ref=e19]
+      - paragraph [ref=e20]:
+        - link "← 退職ハブへ" [ref=e21] [cursor=pointer]:
+          - /url: /taishoku/
+  - contentinfo [ref=e22]:
+    - paragraph [ref=e24]: フリーランスへの道（仮）（学習用・開発中）
+  - alert [ref=e25]

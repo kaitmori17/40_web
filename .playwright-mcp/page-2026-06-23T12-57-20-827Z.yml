@@ -1,0 +1,156 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "半歩先から" [ref=e4] [cursor=pointer]:
+        - /url: "#"
+        - text: 半歩先から
+      - navigation [ref=e6]:
+        - link "退職" [ref=e7] [cursor=pointer]:
+          - /url: "#hubs"
+        - link "試算ツール" [ref=e8] [cursor=pointer]:
+          - /url: "#tool"
+        - link "記事" [ref=e9] [cursor=pointer]:
+          - /url: "#articles"
+        - link "運営者について" [ref=e10] [cursor=pointer]:
+          - /url: "#"
+        - link "試算する →" [ref=e11] [cursor=pointer]:
+          - /url: "#tool"
+  - generic [ref=e13]:
+    - generic [ref=e14]:
+      - generic [ref=e15]: 会社員から、独立へ。
+      - heading "会社を辞める前に、 お金の段取りを片づける。" [level=1] [ref=e16]:
+        - text: 会社を辞める前に、
+        - text: お金の段取りを片づける。
+      - paragraph [ref=e17]: 退職・失業保険・退職金・独立。人事と経営の専門家が、一次情報をもとに「あなたの段取り」を一緒に設計します。
+      - generic [ref=e18]:
+        - link "退職金の手取りを試算する →" [ref=e19] [cursor=pointer]:
+          - /url: "#tool"
+          - text: 退職金の手取りを試算する
+          - generic [ref=e20]: →
+        - link "退職ハブを見る →" [ref=e21] [cursor=pointer]:
+          - /url: "#hubs"
+          - text: 退職ハブを見る
+          - generic [ref=e22]: →
+      - paragraph [ref=e23]: ※試算はブラウザ内で完結。結果は保存されません。
+    - generic [ref=e24]:
+      - generic [ref=e25]:
+        - generic [ref=e26]: 退職金 手取りシミュレーター
+        - generic [ref=e27]: 目安
+      - generic [ref=e28]:
+        - generic [ref=e29]:
+          - generic [ref=e30]: 退職金
+          - generic [ref=e31]:
+            - generic [ref=e32]: 2,000
+            - generic [ref=e33]: 万円
+        - generic [ref=e34]:
+          - generic [ref=e35]: 勤続年数
+          - generic [ref=e36]:
+            - generic [ref=e37]: "25"
+            - generic [ref=e38]: 年
+        - generic [ref=e39]:
+          - generic [ref=e40]: 手取り（概算）
+          - generic [ref=e41]: 19,143,628円
+  - generic [ref=e43]:
+    - generic [ref=e44]:
+      - generic [ref=e45]: ―
+      - generic [ref=e46]:
+        - generic [ref=e47]: 一次情報にもとづく
+        - generic [ref=e48]: ハローワーク・国税庁など公式情報を出典明記。
+    - generic [ref=e49]:
+      - generic [ref=e50]: ―
+      - generic [ref=e51]:
+        - generic [ref=e52]: 専門家が執筆
+        - generic [ref=e53]: 人事・組織・経営コンサルタントの実務視点。
+    - generic [ref=e54]:
+      - generic [ref=e55]: ―
+      - generic [ref=e56]:
+        - generic [ref=e57]: 試算は「目安」と明示
+        - generic [ref=e58]: 断定せず、判断はあなたと公式で。
+  - generic [ref=e60]:
+    - generic [ref=e61]:
+      - generic [ref=e62]: テーマで探す
+      - heading "独立への道のりを、段階ごとに。" [level=2] [ref=e63]
+      - paragraph [ref=e64]: 会社員から独立する「旅」に沿って、必要なお金と手続きをまとめています。
+    - generic [ref=e65]:
+      - link "STEP 01 退職とお金 失業保険・退職金の税金・健康保険・退職代行。辞める前に整える段取り。 記事とツールを見る →" [ref=e66] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e67]: STEP 01
+        - heading "退職とお金" [level=3] [ref=e68]
+        - paragraph [ref=e69]: 失業保険・退職金の税金・健康保険・退職代行。辞める前に整える段取り。
+        - generic [ref=e70]: 記事とツールを見る →
+      - generic [ref=e71]:
+        - generic [ref=e72]: STEP 02
+        - generic [ref=e73]: 準備中
+        - heading "転職という選択" [level=3] [ref=e74]
+        - paragraph [ref=e75]: 業種・年代別の進め方を、採用側の視点から。
+      - generic [ref=e76]:
+        - generic [ref=e77]: STEP 03
+        - generic [ref=e78]: 準備中
+        - heading "開業・確定申告" [level=3] [ref=e79]
+        - paragraph [ref=e80]: 開業届・青色申告・インボイス・会計ソフト。
+      - generic [ref=e81]:
+        - generic [ref=e82]: STEP 04
+        - generic [ref=e83]: 準備中
+        - heading "個人事業主の運営" [level=3] [ref=e84]
+        - paragraph [ref=e85]: 国保・年金・小規模企業共済・節税の実際。
+      - generic [ref=e86]:
+        - generic [ref=e87]: STEP 05
+        - generic [ref=e88]: 準備中
+        - heading "仕事環境を整える" [level=3] [ref=e89]
+        - paragraph [ref=e90]: フリーランスのPC・ツール選び。
+  - generic [ref=e92]:
+    - generic [ref=e93]:
+      - generic [ref=e94]: 退職ハブの記事
+      - heading "いま読まれている解説" [level=2] [ref=e95]
+    - generic [ref=e96]:
+      - link "失業保険 失業保険はいつ・何日・いくら？退職を「逆算で設計」する方法 すぐには出ない・総額は人で変わる・期限がある。設計の順に解説。 →" [ref=e97] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e98]: 失業保険
+        - generic [ref=e99]:
+          - generic [ref=e100]: 失業保険はいつ・何日・いくら？退職を「逆算で設計」する方法
+          - generic [ref=e101]: すぐには出ない・総額は人で変わる・期限がある。設計の順に解説。
+        - generic [ref=e102]: →
+      - link "退職金 退職金の手取りはいくら？退職所得控除のしくみ 勤続20年・1,000万円ならほぼ非課税になる理由。 →" [ref=e103] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e104]: 退職金
+        - generic [ref=e105]:
+          - generic [ref=e106]: 退職金の手取りはいくら？退職所得控除のしくみ
+          - generic [ref=e107]: 勤続20年・1,000万円ならほぼ非課税になる理由。
+        - generic [ref=e108]: →
+      - link "健康保険 退職後の健康保険、任意継続と国保どちらが得か 年収・扶養で分かれる。判断の早見を提示。 →" [ref=e109] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e110]: 健康保険
+        - generic [ref=e111]:
+          - generic [ref=e112]: 退職後の健康保険、任意継続と国保どちらが得か
+          - generic [ref=e113]: 年収・扶養で分かれる。判断の早見を提示。
+        - generic [ref=e114]: →
+  - generic [ref=e117]:
+    - heading "まず、退職金の手取りを把握する。" [level=2] [ref=e118]
+    - paragraph [ref=e119]: 勤続年数と退職金額を入れるだけ。退職所得控除をふまえた手取りの目安が、その場でわかります。
+    - link "退職金シミュレーターを使う →" [ref=e120] [cursor=pointer]:
+      - /url: "#"
+  - contentinfo [ref=e121]:
+    - generic [ref=e122]:
+      - generic [ref=e123]:
+        - link "半歩先から" [ref=e124] [cursor=pointer]:
+          - /url: "#"
+          - text: 半歩先から
+        - paragraph [ref=e126]: 会社員から独立を目指す人へ。退職・お金・手続きを、専門家が一次情報をもとに解説します。
+      - generic [ref=e127]:
+        - generic [ref=e128]:
+          - heading "コンテンツ" [level=4] [ref=e129]
+          - link "退職とお金" [ref=e130] [cursor=pointer]:
+            - /url: "#"
+          - link "試算ツール" [ref=e131] [cursor=pointer]:
+            - /url: "#"
+          - link "記事一覧" [ref=e132] [cursor=pointer]:
+            - /url: "#"
+        - generic [ref=e133]:
+          - heading "サイトについて" [level=4] [ref=e134]
+          - link "運営者情報" [ref=e135] [cursor=pointer]:
+            - /url: "#"
+          - link "プライバシーポリシー" [ref=e136] [cursor=pointer]:
+            - /url: "#"
+          - link "お問い合わせ" [ref=e137] [cursor=pointer]:
+            - /url: "#"
+    - paragraph [ref=e139]: 本サイトは一般的な情報提供であり、個別の助言ではありません。制度・金額は改正されます。最新情報・正確な判断は公式窓口でご確認ください。© 半歩先から
