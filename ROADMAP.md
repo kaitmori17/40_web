@@ -16,8 +16,9 @@ CLAUDE.md が「恒久ルール」、本ファイルが **自分の統合サイ�
   1. **情報設計**=ハブ&スポーク(階層化可)。退職ハブを起点に内部リンクで束ねる。
   2. **URL設計**=サブディレクトリ階層+ローマ字スラッグで確定。構造: `/`(トップ)/ `/taishoku/`(退職ハブ)/ `/taishoku/<記事>/`(スポーク)/ `/tools/<ツール>/`(中核ツール・noindex)。将来 `/tenshoku/` 等を壊さず増設。
   3. **レンダリング方式**=記事は**SSG**(SEO・速度・無料ホスティング)、中核ツールは**CSR+noindex**(動的・doorway回避)。ISR/SSRは当面不要。→ 完成HTMLを置くだけの構成なので **Cloudflare Pages(無料・商用OK)に載せて無料で収益化**できる。
-- **次に着手**: **A-2 実装**。`sites/self` を独立リポジトリ化(+GitHub)し、Next.jsでサイト構築を開始。
-- **未着手の準備物**: `sites/self` の独立リポジトリ+Vercelプロジェクトは A-2(実装)着手時に作成。作成時に status.md を置き、以後はそれを状態の正本にする。
+- **【2026-06-23 A-2 実装 着手】**`sites/self` を Next.js(App Router/TS)で初期化 → GitHub `kaitmori17/self`(private) → 骨組み(トップ/退職ハブ/スポーク/中核ツール+共通レイアウト)まで作成し全ルート200確認。**self の状態の正本は `sites/self/status.md` に移行**(以後セッション冒頭はそれを読む)。
+- **次に着手**: ①中核ツール(退職金シミュレーター)をCSR実装 → ②スポーク記事1本を本執筆 → ③デザインをClaude Designに依頼(タイミング・段取りは status.md)。
+- **Vercel/ドメイン**: Vercelプロジェクトと独自ドメインは A-3(公開)で対応(ドメインは直前取得でOK)。
 - **GitHub**: https://github.com/kaitmori17/40_web.git (branch main)。
 - **受託案件**: 本ロードマップとは別管理。`sites/clients/`(地図は `sites/clients/README.md`)。milimili はそこで一次版公開・オーナー確認待ち。A-3相当(Vercel公開・preview/本番・DNS・HTTPS・Cloudflare移行方針)を実地で学習済み。
 
@@ -82,7 +83,7 @@ CLAUDE.md が「恒久ルール」、本ファイルが **自分の統合サイ�
 |---|---|---|---|
 | 管理基盤 | CLAUDE.md / ROADMAP.md / GLOSSARY.md / Git 構成 | 実践済 | 初回セッションで整備 |
 | A-1 | 設計(情報設計・URL・レンダリング方式) | 理解済 | 3概念とも理解+self向けに設計確定(URL構造・SSG/CSR方針)。詳細は§0 |
-| A-2 | 実装(中核ツール・記事・メタ・JSON-LD・CWV) | 着手予定 | sites/self をリポジトリ化→Next.js構築 |
+| A-2 | 実装(中核ツール・記事・メタ・JSON-LD・CWV) | 進行中 | プロジェクト生成+GitHub+骨組み完了。次=ツール実装/記事執筆/デザイン。詳細は sites/self/status.md |
 | A-3 | 公開(ドメイン・DNS・デプロイ・HTTPS) | 理解済 | milimiliで実地学習(Vercel公開・preview/本番・DNS/ドメイン・HTTPS・Cloudflare方針)。site-01では未実施 |
 | B-1 | インデックス基盤(sitemap/robots/Search Console) | 未着手 | |
 | B-2 | 計測(GA4・Search Console 指標) | 未着手 | |
@@ -94,5 +95,8 @@ CLAUDE.md が「恒久ルール」、本ファイルが **自分の統合サイ�
 - [x] テーマ確定 → 「退職とお金」(退職ハブ)。サイト構成=1ドメイン/フリーランス統合サイト、スタック=Next.js
 - [x] フォルダ整理(self / clients に分離、ドキュメント住み分け)
 - [x] A-1 設計 完了(①情報設計 ②URL設計=サブディレクトリ+ローマ字 ③レンダリング=記事SSG/ツールCSR+noindex)
-- [ ] A-2 実装に着手: `sites/self` をリポジトリ化(+GitHub private)→ Next.js プロジェクト作成 ← 次
-- [ ] (随時)ASP登録・キーワード実ボリューム検証(市場調査の次アクション)
+- [x] A-2 着手: `sites/self` リポジトリ化+GitHub+骨組み(4ページ+共通レイアウト)作成。status.md を正本化
+- [ ] 中核ツール(退職金シミュレーター)CSR実装 ← 次
+- [ ] スポーク記事「失業保険」を一次情報ベースで本執筆
+- [ ] デザインを Claude Design に依頼(ツール+記事1本の後。プロンプトはその時作成)
+- [ ] (随時)ASP登録・キーワード実ボリューム検証

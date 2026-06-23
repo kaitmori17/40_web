@@ -67,5 +67,18 @@
 - **SSR (Server-Side Rendering)**: アクセスのたびにサーバーでHTMLを生成。「人ごとに違う(ログイン後)/秒単位で最新が必要(在庫・検索結果)」をHTMLに載せたいとき向き。本サイトは登場しない見込み。
 - **CSR (Client-Side Rendering)**: 訪問者のブラウザがJSでHTMLを組み立てる方式。中身が後出しなのでSEOに弱いが、非公開・インタラクティブな画面なら十分。**本サイトの中核ツール(結果はnoindexで動的表示)はこれ**。
 
-## (以降、A-2 以降で出てくる用語をここに追記)
-<!-- 例: 構造化データ(JSON-LD) / canonical / GA4 / Search Console / Core Web Vitals ... -->
+## A-2 実装(Next.js の基本)
+- **create-next-app**: Next.js プロジェクトの雛形を生成する公式ツール。`node_modules`(依存パッケージ、数百MB・gitignore対象)も導入する。既にGitリポジトリ内だとgit初期化はスキップする。
+- **App Router**: Next.js の最新のページ構成方式。**`app/` フォルダの構成がそのままURLになる**(ファイルシステムルーティング)。
+- **ファイルシステムルーティング**: フォルダ=URLの階層、`page.tsx`=そのURLで表示する中身。例 `app/taishoku/shitsugyo-hoken/page.tsx` → `/taishoku/shitsugyo-hoken/`。URL設計をそのまま再現できる。
+- **`page.tsx`**: 特定URLで表示されるページ本体(Reactコンポーネントを default export)。
+- **`layout.tsx`**: 複数ページで共有する枠(ヘッダー/フッター等)。ルートの `app/layout.tsx` は必須で `html`/`body` を含む。
+- **`<Link>`(next/link)**: ページ間を移動する内部リンク部品。先読み(prefetch)で表示が速い。ハブ⇄スポークの配線に使う。
+- **`metadata`**: 各ページの `export const metadata` でタイトル・説明文(SEOの基本情報)を指定。ルートで `title.template`(`%s | サイト名`)を設定すると各ページ名が自動で整う。
+- **`robots: { index: false }`(noindex)**: そのページを検索結果に載せない指定。中核ツール(結果は動的)に付け、doorway/薄いページ回避の方針を実装。
+- **`trailingSlash`**: URL末尾スラッシュの扱い。`true` で `/taishoku/` を正とし、静的書き出し時に `taishoku/index.html` を生成(静的ホスティング向き)。
+- **TypeScript / `.tsx`**: JavaScript + 型チェック。`.tsx` はReactのJSXを含むTypeScriptファイル。書き間違いを実行前に検知。
+- **CSR(再掲)**: ブラウザ側でJSが組み立てる方式。中核ツール(入力→計算→結果)はこれで実装予定。
+
+## (以降、A-2後半〜B 以降で出てくる用語をここに追記)
+<!-- 例: 構造化データ(JSON-LD) / canonical / GA4 / Search Console / Core Web Vitals / sitemap / robots.txt ... -->
