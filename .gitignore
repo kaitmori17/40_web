@@ -7,3 +7,6 @@ sites/
 Thumbs.db
 .vscode/
 .idea/
+
+# ツールの一時生成物(Playwright のスナップショット/ログ等)
+.playwright-mcp/
