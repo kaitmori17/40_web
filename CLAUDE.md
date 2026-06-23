@@ -36,6 +36,9 @@
   - 本プロジェクトの管理ルート: `D:/local_backup_manual/dev/40_web`(OneDrive 外)。
 - 状態管理: 各サイトの `status.md` を状態の正本とする。**毎セッション冒頭にまず status.md を読んで状態を復元** する。
   - 進捗・学習ログ → ROADMAP.md と status.md に書く。CLAUDE.md は恒久ルールだけの軽量な状態を保つ。
+- フォルダ構成(地図は `README.md`):
+  - **自分の学習サイトは1つ**=`sites/self`(1リポジトリ。中に複数ハブを増設。複数の独立サイトは作らない)。進捗の正本は ROADMAP.md →(作成後)`sites/self/status.md`。
+  - **受託案件は別物**=`sites/clients/<案件>`(案件ごとに独立リポジトリ+自前 status.md)。**ROADMAP/GLOSSARY に受託の詳細を混ぜない**。
 - Git / GitHub 管理:
   - 1サイト = 1リポジトリ = 1 Vercelプロジェクト を基本とする。各サイトは独立した Git リポジトリ + GitHub プライベートリポジトリ(バックアップ+履歴+複数PC同期)。
   - 全体管理フォルダ(CLAUDE.md / ROADMAP.md / GLOSSARY.md)も軽量な管理用リポジトリにする。リポジトリの入れ子を避けるため、管理用リポジトリでは `sites/` を `.gitignore` する。
