@@ -2,7 +2,7 @@
 
 CLAUDE.md が「恒久ルール」、本ファイルが **自分の統合サイト(`sites/self`)** の計画と学習進捗ログ。`sites/self` 未作成のうちは本ファイルが状態の正本(作成後は `sites/self/status.md` に移す)。**受託案件(milimili 等)は本ファイルに混ぜず `sites/clients/<案件>/status.md` で個別管理**(地図は `README.md`)。
 
-## 0. 現在地 / 再開ポイント(最終更新: 2026-06-23)
+## 0. 現在地 / 再開ポイント(最終更新: 2026-06-24)
 - **完了**: 管理基盤整備(CLAUDE/ROADMAP/GLOSSARY/.gitignore、git init→GitHub push)。site-01のテーマ確定(「退職とお金」シミュレーター)。SEO/収益の基礎概念を学習(検索ボリューム≠上位表示、収益2軸、YMYL)。
 - **【2026-06-23 戦略確定】サイト構成方針を確定(重要)**:
   - **1ドメインに集約(戦略A)**。学習目的+コスト最小化のため、複数ドメインは取らない。
@@ -17,7 +17,9 @@ CLAUDE.md が「恒久ルール」、本ファイルが **自分の統合サイ�
   2. **URL設計**=サブディレクトリ階層+ローマ字スラッグで確定。構造: `/`(トップ)/ `/taishoku/`(退職ハブ)/ `/taishoku/<記事>/`(スポーク)/ `/tools/<ツール>/`(中核ツール・noindex)。将来 `/tenshoku/` 等を壊さず増設。
   3. **レンダリング方式**=記事は**SSG**(SEO・速度・無料ホスティング)、中核ツールは**CSR+noindex**(動的・doorway回避)。ISR/SSRは当面不要。→ 完成HTMLを置くだけの構成なので **Cloudflare Pages(無料・商用OK)に載せて無料で収益化**できる。
 - **【2026-06-23 A-2 実装 着手】**`sites/self` を Next.js(App Router/TS)で初期化 → GitHub `kaitmori17/self`(private) → 骨組み(トップ/退職ハブ/スポーク/中核ツール+共通レイアウト)まで作成し全ルート200確認。**self の状態の正本は `sites/self/status.md` に移行**(以後セッション冒頭はそれを読む)。
-- **次に着手**: **ゲート②=デザインを Next.js に実装**(中核ツール/記事パイプライン/デザインは確定済み)。詳細・作業ログは §6、self の状態は `sites/self/status.md`。
+- **【2026-06-24 ゲート② デザイン実装 完了】**確定デザイン(深緑×ゴールド・モダンミニマル)を Next.js へ翻訳:`globals.css` をデザイントークン化(CSS変数)、再利用コンポーネント7本(`app/components/`:AdSlot/Cta/ArticleMeta/AuthorBio/Disclaimer/Sources/Todo)、全4ページ(トップ/ハブ/記事/ツール)へ適用。Noto Sans JP・auto-phrase・レスポンシブ。失業保険記事は校閲済みv4を**直書きJSXへ移植**。`tsc`/`eslint`/`build` パス、dev で目視確認。
+- **【2026-06-24 公開ブロッカー対応】**必須3ページ雛形(`/about` 運営者情報=E-E-A-T/`/privacy` AdSense・アフィリ前提/`/contact` メール簡易版)を作成。**著者プロフィール確定=「はてく」**(人事・経営・システムコンサル/ファーム8年→独立→法人化/G検定)、失業保険の実体験を記事①へ反映。残作業は本人/外部依存(⑥アフィリ実リンク=ASP後・連絡先メール・独立記事内部リンク・OGP/構造化データ)。
+- **次に着手**: **A-3 公開準備** = ①メタ整備(JSON-LD 構造化データ Article/BreadcrumbList・OGP画像)②本人残作業の差し込み ③ Vercel/ドメイン。詳細・作業ログは §6、self の状態は `sites/self/status.md`。
 - **Vercel/ドメイン**: Vercelプロジェクトと独自ドメインは A-3(公開)で対応(ドメインは直前取得でOK)。
 - **GitHub**: https://github.com/kaitmori17/40_web.git (branch main)。
 - **受託案件**: 本ロードマップとは別管理。`sites/clients/`(地図は `sites/clients/README.md`)。milimili はそこで一次版公開・オーナー確認待ち。A-3相当(Vercel公開・preview/本番・DNS・HTTPS・Cloudflare移行方針)を実地で学習済み。
@@ -118,3 +120,11 @@ CLAUDE.md が「恒久ルール」、本ファイルが **自分の統合サイ�
   - **デザイン確定**:Claude Design で「半歩先から」トップ+記事テンプレ。売り込み感を排し情報・安心(無料/登録不要/個人情報なし)を前面、森の木陰(深緑キャノピー)。フォントNoto Sans JP・word-break:auto-phrase。
   - **運用ドキュメント整備**:`docs/web-development-rules.md`・`docs/tech-learning-log.md` 新設、作業ログ開始、CLAUDE.md を軽量化(移管)。
   - 次回:ゲート②(Next.js実装)から。
+- **2026-06-24**:
+  - 冒頭、前回がシステムエラーで中断→`git status` で両リポジトリのデータ無事を確認(取りこぼしなし)。
+  - **ゲート②=デザイン実装 完走**:`globals.css` をデザイントークン(CSS変数)化、再利用コンポーネント7本(`app/components/`)、全4ページに深緑×ゴールドを適用。Noto Sans JP(preload:false)・auto-phrase・clamp・レスポンシブ。Playwrightでデスクトップ/モバイル/ツール計算を目視検証。
+  - **失業保険記事を直書きJSXへ移植**(校閲済みv4)。著者メタ・目次・広告枠・出典・免責・著者枠を部品適用。MDXは記事増加後に再検討。
+  - **必須3ページ雛形**(about/privacy/contact)作成 → 公開ブロッカー「実ページ無し」を解消。
+  - **著者プロフィール確定=「はてく」**(人事・経営・システムコンサル/総合ファーム8年→独立→法人化/G検定)。**失業保険の実体験**(受給前に個人事業主開業→失業状態に当たらず受け取れず)を記事①の導入へ。生活費の具体額(月30万×3≒90〜100万)を②へ。チャットで本人ヒアリング→私がJSX反映、の運用を確立。
+  - 残:⑥アフィリ実リンク(ASP後)・独立記事内部リンク・連絡先メール・OGP/構造化データ。
+  - 次回:A-3 公開準備(構造化データJSON-LD・OGP)から。
