@@ -20,7 +20,8 @@ CLAUDE.md が「恒久ルール」、本ファイルが **自分の統合サイ�
 - **【2026-06-24 ゲート② デザイン実装 完了】**確定デザイン(深緑×ゴールド・モダンミニマル)を Next.js へ翻訳:`globals.css` をデザイントークン化(CSS変数)、再利用コンポーネント7本(`app/components/`:AdSlot/Cta/ArticleMeta/AuthorBio/Disclaimer/Sources/Todo)、全4ページ(トップ/ハブ/記事/ツール)へ適用。Noto Sans JP・auto-phrase・レスポンシブ。失業保険記事は校閲済みv4を**直書きJSXへ移植**。`tsc`/`eslint`/`build` パス、dev で目視確認。
 - **【2026-06-24 公開ブロッカー対応】**必須3ページ雛形(`/about` 運営者情報=E-E-A-T/`/privacy` AdSense・アフィリ前提/`/contact` メール簡易版)を作成。**著者プロフィール確定=「はてく」**(人事・経営・システムコンサル/ファーム8年→独立→法人化/G検定)、失業保険の実体験を記事①へ反映。残作業は本人/外部依存(⑥アフィリ実リンク=ASP後・連絡先メール・独立記事内部リンク・OGP/構造化データ)。
 - **【2026-06-24 A-3.1 技術SEO土台 完了】**`metadataBase`・canonical(全インデックス対象)・OGP/Twitterメタ・JSON-LD(WebSite/Article/BreadcrumbList)・`app/sitemap.ts`・`app/robots.ts` を実装。URLは `app/lib/site.ts` の `SITE_URL` に集約(env `NEXT_PUBLIC_SITE_URL` で上書き可、現状は仮 `example.com`)。build/dev で robots.txt・sitemap.xml・JSON-LD・canonical 出力を検証。
-- **次に着手**: **A-3.2 OG画像**(`opengraph-image` 生成。ImageResponseは既定でCJK非対応のため**日本語フォント対応が必要**)→ **A-3.3 公開**(ドメイン取得→`SITE_URL`差替→Vercel/Cloudflare Pages)。詳細・作業ログは §6、self の状態は `sites/self/status.md`。
+- **【2026-06-24 A-3.2 OG画像 完了】**`app/opengraph-image.tsx`。`ImageResponse` + Google Fonts の `text=` サブセットで Noto Sans JP を埋め込み(500KB制限回避・CJK対応)、深緑×ゴールドの全ページ既定OG画像。build/devで1200×630 PNG・日本語表示・`og:image` 出力を検証。
+- **次に着手**: **A-3.3 公開**(①ドメイン取得〔はてくさんの操作〕→ ②`SITE_URL` 差替 → ③ Vercel/Cloudflare Pages デプロイ → ④ Search Console で sitemap 送信・インデックス確認)。詳細・作業ログは §6、self の状態は `sites/self/status.md`。
 - **Vercel/ドメイン**: Vercelプロジェクトと独自ドメインは A-3(公開)で対応(ドメインは直前取得でOK)。
 - **GitHub**: https://github.com/kaitmori17/40_web.git (branch main)。
 - **受託案件**: 本ロードマップとは別管理。`sites/clients/`(地図は `sites/clients/README.md`)。milimili はそこで一次版公開・オーナー確認待ち。A-3相当(Vercel公開・preview/本番・DNS・HTTPS・Cloudflare移行方針)を実地で学習済み。
@@ -129,5 +130,6 @@ CLAUDE.md が「恒久ルール」、本ファイルが **自分の統合サイ�
   - **著者プロフィール確定=「はてく」**(人事・経営・システムコンサル/総合ファーム8年→独立→法人化/G検定)。**失業保険の実体験**(受給前に個人事業主開業→失業状態に当たらず受け取れず)を記事①の導入へ。生活費の具体額(月30万×3≒90〜100万)を②へ。チャットで本人ヒアリング→私がJSX反映、の運用を確立。
   - 連絡先メール反映(`hatec17str@gmail.com`)。ASP(=アフィリ仲介)を説明しGLOSSARYに記録。
   - **A-3.1 技術SEO土台**:metadataBase・canonical・OGP/Twitter・JSON-LD(WebSite/Article/BreadcrumbList)・sitemap.ts・robots.ts。URLは `app/lib/site.ts` に集約(env上書き可)。build/devで出力検証。新用語をGLOSSARYに追記。
-  - 残:⑥アフィリ実リンク(ASP後・公開後)・独立記事内部リンク・OG画像(日本語フォント)・実ドメイン差替。
-  - 次回:A-3.2 OG画像(日本語フォント対応)→ A-3.3 公開(ドメイン取得・デプロイ)。
+  - **A-3.2 OG画像**:`app/opengraph-image.tsx`(ImageResponse+Google Fonts text=サブセットでNoto Sans JP埋め込み、深緑×ゴールド)。build/devで日本語表示・og:image出力を検証。GLOSSARYに用語追記。
+  - 残:⑥アフィリ実リンク(ASP後・公開後)・独立記事内部リンク・実ドメイン差替。
+  - 次回:A-3.3 公開(ドメイン取得・`SITE_URL`差替・デプロイ・Search Console)。

@@ -106,6 +106,9 @@
 - **robots.txt**: クローラー(巡回ロボット)に「どこを巡回してよいか」と sitemap の場所を伝えるファイル。Next.js では `app/robots.ts` で生成。**noindex で隠したいページは robots で巡回を止めない**(止めると noindex を読めない)。
 - **OGP(再掲・実装)**: SNS共有時のカード表示。`og:title`/`og:description`/`og:image`/`og:type`(記事は `article`)等。Next.js では `metadata.openGraph` で出力。ページが `openGraph` を設定すると親の設定を**置き換える**(継承されない)ので、`siteName` 等は再指定する。
 - **環境変数 (environment variable)**: コードに直書きせず、デプロイ先ごとに外から渡す設定値。`NEXT_PUBLIC_` 始まりはブラウザにも露出する。本サイトは公開ドメインを `NEXT_PUBLIC_SITE_URL` で上書きできる。
+- **OG画像 (opengraph-image)**: SNS共有時にカードへ表示される画像(推奨1200×630)。Next.js は `app/opengraph-image.(tsx/png…)` を置くと自動で `og:image` を出力。`tsx` なら `ImageResponse` でJSX/CSSから動的生成できる。
+- **ImageResponse / satori**: Next.js(`next/og`)がJSX+CSSをPNG画像に変換する仕組み(内部はsatori)。**flexboxのみ**等の制約があり、**フォントは ttf/otf/woff のみ・合計500KBまで**。日本語フォントは内蔵しない。
+- **フォントサブセット (font subset) / `text=`**: フォントから「使う文字だけ」を抜き出して極小化する手法。Google Fonts は `...&text=半歩先から` のように指定すると、その文字だけのフォントを返す。CJK(巨大)を500KB制限内でOG画像に埋め込むのに使う。
 
 ## (以降、B 以降で出てくる用語をここに追記)
 <!-- 例: GA4 / Search Console / Core Web Vitals / インデックス登録 / ImageResponse(OG画像) ... -->
