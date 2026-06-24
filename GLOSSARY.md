@@ -96,5 +96,16 @@
 - **`rel="sponsored"`**: 広告・アフィリエイトのリンクに付ける属性で、「これは広告リンク」と検索エンジンに明示する(Google推奨・規約順守)。外部リンクには `rel="noopener"`(別タブで開く際の安全対策)も付ける。
 - **BLUF (Bottom Line Up Front)**: 結論を最初に書く構成。記事冒頭で「要点3つ」を先出しして離脱を防ぐ。本サイト記事の標準。
 
-## (以降、A-3 公開〜B 以降で出てくる用語をここに追記)
-<!-- 例: 構造化データ(JSON-LD) / canonical / GA4 / Search Console / Core Web Vitals / sitemap / robots.txt ... -->
+## A-3 公開・技術SEO
+- **構造化データ / JSON-LD**: ページの内容を「これは記事/著者/パンくず」と**機械可読**で検索エンジンに伝える仕組み。`schema.org` の語彙を使い、`<script type="application/ld+json">` でページに埋め込む。検索結果のリッチ表示(著者・日付など)に繋がる。
+- **schema.org**: 構造化データの共通語彙(型)の定義集。`Article`(記事)・`BreadcrumbList`(パンくず)・`WebSite`・`Person`・`Organization` などを使う。
+- **リッチリザルト (rich results)**: 通常の青リンクに加え、評価の星・FAQ・日付などが付いた検索結果の見た目。構造化データが前提。Googleの「リッチリザルトテスト」で検証できる。
+- **canonical(正規URL)**: 「このページの“正式なURLはこれ”」を検索エンジンに伝える指定(`<link rel="canonical">`)。末尾スラッシュ違いやパラメータ付きで**同じ内容が複数URLになる重複**を1つに集約し、評価の分散を防ぐ。
+- **metadataBase**: Next.js で相対パス(`/about/`)を絶対URL(`https://…/about/`)へ自動変換する基準URL。canonical・OGP・sitemap がこれを使う。本サイトは `app/lib/site.ts` の `SITE_URL` に集約。
+- **sitemap.xml**: サイト内の全(インデックス対象)ページの一覧を検索エンジンに提出する地図ファイル。各URLに最終更新日・更新頻度・優先度を添える。Next.js では `app/sitemap.ts` で生成。
+- **robots.txt**: クローラー(巡回ロボット)に「どこを巡回してよいか」と sitemap の場所を伝えるファイル。Next.js では `app/robots.ts` で生成。**noindex で隠したいページは robots で巡回を止めない**(止めると noindex を読めない)。
+- **OGP(再掲・実装)**: SNS共有時のカード表示。`og:title`/`og:description`/`og:image`/`og:type`(記事は `article`)等。Next.js では `metadata.openGraph` で出力。ページが `openGraph` を設定すると親の設定を**置き換える**(継承されない)ので、`siteName` 等は再指定する。
+- **環境変数 (environment variable)**: コードに直書きせず、デプロイ先ごとに外から渡す設定値。`NEXT_PUBLIC_` 始まりはブラウザにも露出する。本サイトは公開ドメインを `NEXT_PUBLIC_SITE_URL` で上書きできる。
+
+## (以降、B 以降で出てくる用語をここに追記)
+<!-- 例: GA4 / Search Console / Core Web Vitals / インデックス登録 / ImageResponse(OG画像) ... -->
